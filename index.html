@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=VT323&display=swap"
+        rel="stylesheet">
     <style>
         /* Reset and General Styles */
         * {
@@ -25,22 +28,25 @@
         }
 
         /* Forceful cursor implementation */
-        html, body {
+        html,
+        body {
             cursor: url('images/heartcursor.png'), auto !important;
         }
 
-        a, button, .copy-button {
+        a,
+        button,
+        .copy-button {
             cursor: url('images/heartcursor.png'), pointer !important;
         }
 
         body {
             font-family: 'Comic Neue', sans-serif;
             line-height: 1.7;
-            color: #F5F5F5; 
-            background-color: #0E0E10; 
+            color: #F5F5F5;
+            background-color: #0E0E10;
             overflow-x: hidden;
-            position: relative; 
-            background-image: 
+            position: relative;
+            background-image:
                 radial-gradient(circle at 20% 20%, rgba(255, 179, 209, 0.02) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(141, 242, 228, 0.02) 0%, transparent 50%),
                 linear-gradient(90deg, rgba(255, 179, 209, 0.01) 1px, transparent 1px),
@@ -50,11 +56,14 @@
         }
 
         @keyframes backgroundPulse {
-            0%, 100% { 
+
+            0%,
+            100% {
                 background-size: 100% 100%, 100% 100%, 80px 80px, 80px 80px;
                 opacity: 1;
             }
-            50% { 
+
+            50% {
                 background-size: 120% 120%, 120% 120%, 85px 85px, 85px 85px;
                 opacity: 0.95;
             }
@@ -64,8 +73,8 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
-            position: relative; 
-            z-index: 2; 
+            position: relative;
+            z-index: 2;
         }
 
         /* Preloader Styles */
@@ -82,18 +91,29 @@
             z-index: 10001;
             transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
+
         #preloader.loaded {
             opacity: 0;
             visibility: hidden;
         }
+
         #preloader img {
             max-width: 150px;
             animation: pulse 1.5s ease-in-out infinite;
         }
+
         @keyframes pulse {
-            0% { transform: scale(0.95); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(0.95); }
+            0% {
+                transform: scale(0.95);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(0.95);
+            }
         }
 
         /* Cursor light effect for entire site */
@@ -125,54 +145,59 @@
             --text-muted: #AAAAAA;
             --header-font: 'Bangers', cursive;
             --body-font: 'Comic Neue', sans-serif;
-            --special-font: 'VT323', monospace; 
+            --special-font: 'VT323', monospace;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--header-font);
-            color: var(--primary-accent); 
+            color: var(--primary-accent);
             margin-bottom: 1rem;
             line-height: 1.3;
-            font-weight: 400; 
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
             -webkit-text-stroke: 1.5px black;
             text-stroke: 1.5px black;
-            text-shadow: none; 
+            text-shadow: none;
             paint-order: stroke fill;
         }
-        
+
         /* Header */
         #main-header {
-            background: rgba(14, 14, 16, 0.95); 
+            background: rgba(14, 14, 16, 0.95);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             padding: 0.75rem 0;
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 10000; 
+            z-index: 10000;
             border-bottom: 4px solid #000;
             box-shadow: none;
         }
 
-        #main-header .container { 
-            display: flex; 
-            align-items: center; 
+        #main-header .container {
+            display: flex;
+            align-items: center;
         }
 
-        .logo-link { 
-            display: flex; 
-            align-items: center; 
+        .logo-link {
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            margin-right: auto; 
+            margin-right: auto;
         }
 
         .header-logo {
-            height: 50px; 
+            height: 50px;
             width: auto;
             margin-right: 10px;
-            border-radius: 50%; 
+            border-radius: 50%;
             border: 3px solid #000;
             box-shadow: 0 0 20px rgba(255, 179, 209, 0.4);
             transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -183,10 +208,10 @@
             transform: scale(1.05);
         }
 
-        .logo-text { 
+        .logo-text {
             font-family: var(--header-font);
-            font-size: 2.5rem; 
-            color: var(--primary-accent); 
+            font-size: 2.5rem;
+            color: var(--primary-accent);
             margin-bottom: 0;
             font-weight: 400;
             letter-spacing: 2px;
@@ -196,15 +221,24 @@
             paint-order: stroke fill;
         }
 
-        #main-header nav { display: flex; }
-        #main-header nav ul { list-style: none; display: flex; }
-        #main-header nav li { margin-left: 0; } 
+        #main-header nav {
+            display: flex;
+        }
 
-        #main-header nav a { 
-            color: var(--text-light); 
-            text-decoration: none; 
-            font-size: 1.1rem; 
-            font-weight: 600; 
+        #main-header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #main-header nav li {
+            margin-left: 0;
+        }
+
+        #main-header nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
             transition: all 0.3s ease;
             font-family: var(--header-font);
             text-transform: uppercase;
@@ -214,35 +248,77 @@
             paint-order: stroke fill;
         }
 
-        #main-header nav a:hover { 
-            color: var(--secondary-accent); 
-            text-decoration: none; 
+        #main-header nav a:hover {
+            color: var(--secondary-accent);
+            text-decoration: none;
             transform: translateY(-2px);
         }
 
-        .menu-toggle { display: none; background: none; border: none; padding: 10px; z-index: 10001; }
-        .hamburger { display: block; width: 25px; height: 3px; background-color: var(--primary-accent); position: relative; transition: transform 0.3s ease, background-color 0.3s ease; box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
-        .hamburger::before, .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 3px; background-color: var(--primary-accent); transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease; }
-        .hamburger::before { top: -8px; }
-        .hamburger::after { bottom: -8px; }
-        .menu-toggle.active .hamburger { background-color: transparent; }
-        .menu-toggle.active .hamburger::before { top: 0; transform: rotate(45deg); }
-        .menu-toggle.active .hamburger::after { bottom: 0; transform: rotate(-45deg); }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            padding: 10px;
+            z-index: 10001;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-accent);
+            position: relative;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-accent);
+            transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            bottom: -8px;
+        }
+
+        .menu-toggle.active .hamburger {
+            background-color: transparent;
+        }
+
+        .menu-toggle.active .hamburger::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .menu-toggle.active .hamburger::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
 
         /* Hero Section */
         #hero {
-            min-height: 100vh; 
-            height: auto; 
-            padding-top: 120px; 
-            padding-bottom: 60px; 
+            min-height: 100vh;
+            height: auto;
+            padding-top: 120px;
+            padding-bottom: 60px;
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
-            justify-content: center; 
+            justify-content: center;
             text-align: center;
-            position: relative; 
-            overflow: hidden; 
-            z-index: 1; 
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
 
         .hero-content {
@@ -278,13 +354,13 @@
         }
 
 
-        #hero h2 { 
-            font-size: 5rem; 
-            color: var(--text-light); 
+        #hero h2 {
+            font-size: 5rem;
+            color: var(--text-light);
             margin-bottom: 0.5rem;
             letter-spacing: 3px;
         }
-        
+
         .awakened-text {
             font-family: var(--special-font);
             font-size: 1.5rem;
@@ -296,16 +372,18 @@
             text-stroke: none;
         }
 
-        .social-links { margin-bottom: 1.5rem; }
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
 
-        .social-icon { 
-            width: 55px; 
+        .social-icon {
+            width: 55px;
             height: 55px;
-            margin: 0 15px; 
+            margin: 0 15px;
             transition: all 0.3s ease;
         }
 
-        .social-icon:hover { 
+        .social-icon:hover {
             transform: scale(1.15) translateY(-3px);
         }
 
@@ -329,11 +407,11 @@
         /* Content Sections */
         .content-section {
             padding: 80px 0;
-            position: relative; 
+            position: relative;
             z-index: 1;
             border-top: 4px solid #000;
         }
-        
+
         .section-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -341,71 +419,101 @@
             align-items: center;
         }
 
-        .section-image-container video, .section-image-container img {
+        .section-image-container video,
+        .section-image-container img {
             width: 100%;
             height: auto;
             border-radius: 15px;
             border: 4px solid #000;
             box-shadow: 0 8px 40px rgba(255, 179, 209, 0.15);
         }
-        
+
         .section-image-container .frameless-image {
             border: none;
             box-shadow: none;
             background: transparent;
         }
-        
+
         .floating-image {
             animation: float 4s ease-in-out infinite;
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         .section-grid h2 {
             text-align: left;
-            font-size: 4rem; 
+            font-size: 4rem;
             margin-bottom: 1.5rem;
         }
-        
-        .section-grid.reverse .section-image-container { order: 2; }
-        
-        .section-content { font-size: 1.2rem; }
-        #tokenomics h2 { text-align: center; }
-        .section-content p, .section-content li { margin-bottom: 1rem; }
-        .section-content ul { list-style-position: inside; padding-left: 0; }
-        .section-content ul li::marker { content: "• "; color: var(--primary-accent); }
-        
+
+        .section-grid.reverse .section-image-container {
+            order: 2;
+        }
+
+        .section-content {
+            font-size: 1.2rem;
+        }
+
+        #tokenomics h2 {
+            text-align: center;
+        }
+
+        .section-content p,
+        .section-content li {
+            margin-bottom: 1rem;
+        }
+
+        .section-content ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        .section-content ul li::marker {
+            content: "• ";
+            color: var(--primary-accent);
+        }
+
         /* Contract Address Section */
         .contract-address-section {
             text-align: center;
-            margin-top: 40px; 
+            margin-top: 40px;
             margin-bottom: 40px;
             padding: 25px;
-            background: linear-gradient(135deg, rgba(26, 26, 31, 0.8) 0%, rgba(26, 26, 31, 0.6) 100%); 
+            background: linear-gradient(135deg, rgba(26, 26, 31, 0.8) 0%, rgba(26, 26, 31, 0.6) 100%);
             border-radius: 15px;
             border: 4px solid #000;
-            max-width: 700px; 
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             backdrop-filter: blur(15px);
         }
 
-        .contract-address-section h3 { font-size: 2.5rem; }
+        .contract-address-section h3 {
+            font-size: 2.5rem;
+        }
 
         .contract-address-value {
-            font-family: 'Courier New', Courier, monospace; 
-            font-size: 1.1rem; 
-            color: var(--background-dark); 
-            background: linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%); 
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            color: var(--background-dark);
+            background: linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%);
             padding: 12px 16px;
             border-radius: 8px;
-            border: 2px solid #000; 
-            word-break: break-all; 
-            display: inline-block; 
+            border: 2px solid #000;
+            word-break: break-all;
+            display: inline-block;
             margin-bottom: 20px;
         }
 
@@ -429,15 +537,15 @@
         }
 
         /* Tokenomics */
-        .tokenomics-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 20px; 
-            text-align: center; 
+        .tokenomics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
         }
 
         .tokenomic-item {
-            background: linear-gradient(135deg, rgba(26, 26, 31, 0.6) 0%, rgba(26, 26, 31, 0.8) 100%); 
+            background: linear-gradient(135deg, rgba(26, 26, 31, 0.6) 0%, rgba(26, 26, 31, 0.8) 100%);
             padding: 25px;
             border-radius: 15px;
             border: 4px solid #000;
@@ -450,7 +558,9 @@
             border-color: var(--primary-accent);
         }
 
-        .tokenomic-item h3 { font-size: 2.2rem; }
+        .tokenomic-item h3 {
+            font-size: 2.2rem;
+        }
 
         .tokenomic-item p {
             font-family: var(--body-font);
@@ -458,7 +568,7 @@
             font-size: 1.2rem;
             color: var(--text-light);
         }
-        
+
         .tokenomics-video-container {
             max-width: 700px;
             margin: 40px auto 0 auto;
@@ -473,20 +583,20 @@
 
         /* Footer */
         #main-footer {
-            background: var(--background-dark); 
+            background: var(--background-dark);
             color: var(--text-light);
             text-align: center;
             padding: 2rem 0;
             border-top: 4px solid #000;
-            position: relative; 
-            z-index: 1; 
+            position: relative;
+            z-index: 1;
         }
 
-        #main-footer p { 
-            font-family: var(--header-font); 
-            font-size: 1.5rem; 
+        #main-footer p {
+            font-family: var(--header-font);
+            font-size: 1.5rem;
             letter-spacing: 1px;
-            opacity: 0.8; 
+            opacity: 0.8;
             -webkit-text-stroke: 1px black;
             text-stroke: 1px black;
             paint-order: stroke fill;
@@ -494,46 +604,89 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .logo-text { font-size: 2rem; }
-            .header-logo { height: 40px; }
+            .logo-text {
+                font-size: 2rem;
+            }
+
+            .header-logo {
+                height: 40px;
+            }
 
             #main-header nav {
-                display: none; 
+                display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 100%; 
-                left: 0; 
+                top: 100%;
+                left: 0;
                 width: 100%;
-                background-color: rgba(0, 0, 0, 0.95); 
+                background-color: rgba(0, 0, 0, 0.95);
                 padding: 1rem 0;
                 border-top: 4px solid #000;
             }
 
-            #main-header nav.active { display: flex; } 
-            #main-header nav ul { flex-direction: column; width: 100%; }
-            #main-header nav li { margin: 10px auto; text-align: center; } 
-            .menu-toggle { display: block; } 
+            #main-header nav.active {
+                display: flex;
+            }
 
-            #hero h2 { font-size: 3rem; }
-            .awakened-text { font-size: 1.2rem; }
-            
-            .section-grid { grid-template-columns: 1fr; gap: 30px; }
-            .section-grid h2 { font-size: 3rem; }
-            .section-grid.reverse .section-image-container { order: 0; }
-            
+            #main-header nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #main-header nav li {
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            #hero h2 {
+                font-size: 3rem;
+            }
+
+            .awakened-text {
+                font-size: 1.2rem;
+            }
+
+            .section-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-grid h2 {
+                font-size: 3rem;
+            }
+
+            .section-grid.reverse .section-image-container {
+                order: 0;
+            }
+
             .hero-video-container {
                 width: 300px;
                 height: 300px;
             }
 
-            .contract-address-section { max-width: 95%; }
-            .contract-address-value { font-size: 0.9rem; }
-            #tokenomics h2 { font-size: 3rem; }
-            .tokenomics-grid { grid-template-columns: 1fr; }
-        }
+            .contract-address-section {
+                max-width: 95%;
+            }
 
+            .contract-address-value {
+                font-size: 0.9rem;
+            }
+
+            #tokenomics h2 {
+                font-size: 3rem;
+            }
+
+            .tokenomics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Preloader HTML -->
     <div id="preloader">
@@ -566,9 +719,13 @@
             <h2>She was here before Milady...</h2>
             <p class="awakened-text">$HORORO has awakened.</p>
             <div class="social-links">
-                <a href="https://t.me/HororoETH" target="_blank" title="Telegram"><img src="images/telegram.svg" alt="Telegram" class="social-icon"></a>
-                <a href="https://x.com/HororoERC" target="_blank" title="Twitter (X)"><img src="images/x.svg" alt="Twitter" class="social-icon"></a>
-                <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x637340ffaeec55e9da0efb799f99fdb879c12a3c?t=1753692957617" target="_blank" title="DexScreener"><img src="images/dextools.svg" alt="Dextools" class="social-icon"></a>
+                <a href="https://t.me/HororoETH" target="_blank" title="Telegram"><img src="images/telegram.svg"
+                        alt="Telegram" class="social-icon"></a>
+                <a href="https://x.com/HororoERC" target="_blank" title="Twitter (X)"><img src="images/x.svg"
+                        alt="Twitter" class="social-icon"></a>
+                <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x637340ffaeec55e9da0efb799f99fdb879c12a3c?t=1753692957617"
+                    target="_blank" title="DexScreener"><img src="images/dextools.svg" alt="Dextools"
+                        class="social-icon"></a>
             </div>
             <p class="email-text">HororoETH@proton.me</p>
         </div>
@@ -584,9 +741,13 @@
                     <h2>About HORORO</h2>
                     <div class="section-content">
                         <p>$HORORO is a cultural artifact reborn onchain.</p>
-                        <p>Long before the Milady Maker NFTs took over the timeline, Hororo wandered the net — a wide-eyed, broken-but-beautiful avatar of early Remilia lore.</p>
-                        <p>Hororo is what inspired Remilia's founders during the pre-Milady era, embodying the early trauma-core, coquette, and net-surrealist aesthetic that would later crystallize into the Milady identity.</p>
-                        <p>Now, Hororo returns as an ERC-20 token — not just a memecoin, but a memory. $HORORO is for the real ones who remember.</p>
+                        <p>Long before the Milady Maker NFTs took over the timeline, Hororo wandered the net — a
+                            wide-eyed, broken-but-beautiful avatar of early Remilia lore.</p>
+                        <p>Hororo is what inspired Remilia's founders during the pre-Milady era, embodying the early
+                            trauma-core, coquette, and net-surrealist aesthetic that would later crystallize into the
+                            Milady identity.</p>
+                        <p>Now, Hororo returns as an ERC-20 token — not just a memecoin, but a memory. $HORORO is for
+                            the real ones who remember.</p>
                     </div>
                 </div>
             </div>
@@ -597,15 +758,19 @@
         <div class="container">
             <div class="section-grid reverse">
                 <div class="section-image-container">
-                     <img src="images/mainlogo2.png" alt="Milady and Hororo comparison" class="floating-image frameless-image">
+                    <img src="images/mainlogo2.png" alt="Milady and Hororo comparison"
+                        class="floating-image frameless-image">
                 </div>
                 <div class="section-text">
                     <h2>Why Is HORORO Famous?</h2>
                     <div class="section-content">
                         <ul>
-                            <li><strong>OG Remilia Lore:</strong> Hororo predates Milady — a foundational character in the Remilia mythos. If Milady is the face, Hororo is the ghost in the machine.</li>
-                            <li><strong>Proto-Milady Energy:</strong> The wide eyes, the surreal sadness, the glitched-out beauty — Hororo walked so Milady could fly.</li>
-                            <li><strong>Cult Symbolism:</strong> Among Milady insiders and loreheads, Hororo is whispered with reverence. She's not just a character — she's a sigil.</li>
+                            <li><strong>OG Remilia Lore:</strong> Hororo predates Milady — a foundational character in
+                                the Remilia mythos. If Milady is the face, Hororo is the ghost in the machine.</li>
+                            <li><strong>Proto-Milady Energy:</strong> The wide eyes, the surreal sadness, the
+                                glitched-out beauty — Hororo walked so Milady could fly.</li>
+                            <li><strong>Cult Symbolism:</strong> Among Milady insiders and loreheads, Hororo is
+                                whispered with reverence. She's not just a character — she's a sigil.</li>
                         </ul>
                     </div>
                 </div>
@@ -618,7 +783,8 @@
             <h2>Tokenomics</h2>
             <div class="contract-address-section">
                 <h3>Contract Address:</h3>
-                <p class="contract-address-value" id="contractAddressValue">0x2ec24fc75cf4dcc8475a48b3f6a880dbc6901ecf</p>
+                <p class="contract-address-value" id="contractAddressValue">0x2ec24fc75cf4dcc8475a48b3f6a880dbc6901ecf
+                </p>
                 <button class="copy-button" onclick="copyContractAddress()">Copy Address</button>
             </div>
             <div class="tokenomics-grid">
@@ -656,36 +822,36 @@
 
     <script>
         // Preloader Script
-        window.onload = function() {
+        window.onload = function () {
             const preloader = document.getElementById('preloader');
             if (preloader) {
                 preloader.classList.add('loaded');
                 setTimeout(() => {
                     preloader.style.display = 'none';
-                }, 500); 
+                }, 500);
             }
         };
 
         // ... (Rest of script is unchanged)
         const cursorLight = document.getElementById('cursorLight');
-        document.addEventListener('mousemove', function(e) {
+        document.addEventListener('mousemove', function (e) {
             cursorLight.style.left = e.clientX + 'px';
             cursorLight.style.top = e.clientY + 'px';
             cursorLight.classList.add('active');
         });
-        document.addEventListener('mouseleave', function() {
+        document.addEventListener('mouseleave', function () {
             cursorLight.classList.remove('active');
         });
-        document.addEventListener('mouseenter', function() {
+        document.addEventListener('mouseenter', function () {
             cursorLight.classList.add('active');
         });
-        document.addEventListener('touchstart', function(e) {
+        document.addEventListener('touchstart', function (e) {
             const touch = e.touches[0];
             cursorLight.style.left = touch.clientX + 'px';
             cursorLight.style.top = touch.clientY + 'px';
             cursorLight.classList.add('active');
         });
-        document.addEventListener('touchmove', function(e) {
+        document.addEventListener('touchmove', function (e) {
             e.preventDefault();
             const touch = e.touches[0];
             cursorLight.style.left = touch.clientX + 'px';
@@ -707,16 +873,17 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('#main-header nav');
         if (menuToggle && nav) {
-            menuToggle.addEventListener('click', function() {
+            menuToggle.addEventListener('click', function () {
                 nav.classList.toggle('active');
                 menuToggle.classList.toggle('active');
             });
         }
+
         function copyContractAddress() {
             const contractAddressElement = document.getElementById('contractAddressValue');
             const addressText = contractAddressElement.innerText;
             const copyButton = document.querySelector('.copy-button');
-            navigator.clipboard.writeText(addressText).then(function() {
+            navigator.clipboard.writeText(addressText).then(function () {
                 if (copyButton) {
                     const originalText = copyButton.innerText;
                     copyButton.innerText = 'Copied!';
@@ -724,7 +891,7 @@
                         copyButton.innerText = originalText;
                     }, 2000);
                 }
-            }, function(err) {
+            }, function (err) {
                 if (copyButton) {
                     copyButton.innerText = 'Copy Failed';
                     setTimeout(() => {
@@ -735,4 +902,5 @@
         }
     </script>
 </body>
+
 </html>
